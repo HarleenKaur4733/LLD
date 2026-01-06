@@ -1,18 +1,15 @@
-## Getting Started
+A console-based Tic-Tac-Toe game implemented in Java with a focus on clean Low Level Design.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Core Objects & Relationships:
 
-## Folder Structure
+Game → controls game flow and player turns
 
-The workspace contains two folders by default, where:
+Board → manages board state and move validation
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Player → owns a PlayingPiece and decides the move
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+PlayingPiece → represents X or O
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Move → holds the selected row and column
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+<img width="835" height="657" alt="image" src="https://github.com/user-attachments/assets/f08c05c6-fbdf-48b2-8379-d66a2b7eb33c" />
