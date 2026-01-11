@@ -8,4 +8,9 @@ public class Display {
         this.floor = floor;
         this.direction = direction;
     }
+
+    public void showDisplay() {
+        System.out.println("FLOOR: " + floor);
+        System.out.println("DIRECTION: " + direction);
+    }
 }
