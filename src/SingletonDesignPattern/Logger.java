@@ -4,6 +4,8 @@ import java.sql.Timestamp;
 
 // Double checked logging singleton pattern
 public class Logger {
+    // This variable can change at any time by another thread. Don't let threads
+    // rely on stale cached values—make updates visible across threads.
     private static volatile Logger instance;
 
     private Logger() {
