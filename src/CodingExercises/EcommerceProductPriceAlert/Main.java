@@ -1,10 +1,4 @@
-
-import StrategyDesignPattern.EmailNotifications;
-import StrategyDesignPattern.NotificationContext;
-import StrategyDesignPattern.NotificationSender;
-import StrategyDesignPattern.WhatsappNotifications;
-
-public class App {
+public class Main {
     public static void main(String[] args) {
         Product product = new Product("Iphone 14", 999.99);
         product.subscribeObserver(new User("Alice"));
@@ -15,4 +9,3 @@ public class App {
         product.setProductPrice(799.99);
     }
 }
-
