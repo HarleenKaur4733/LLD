@@ -17,3 +17,5 @@ public enum EnumSolution {
 
 // use it like EnumSolution.INSTANCE.error("This is an error message", new
 // Timestamp(System.currentTimeMillis()));
+
+// Enum constants are initialized exactly once when the enum class is loaded, and class loading is thread-safe.
