@@ -1,4 +1,4 @@
-package ShapeFactory;
+package CodingExercises.ShapeFactory;
 
 public interface Shape {
     void area();

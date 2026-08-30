@@ -1,4 +1,4 @@
-package ParkingLot;
+package CodingExercises.ParkingLot;
 
 public class Slot {
     int slotNumber;

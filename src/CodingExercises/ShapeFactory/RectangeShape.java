@@ -1,4 +1,4 @@
-package ShapeFactory;
+package CodingExercises.ShapeFactory;
 
 public class RectangeShape implements Shape {
     private double length;

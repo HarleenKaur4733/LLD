@@ -1,8 +1,5 @@
-
-import StrategyDesignPattern.EmailNotifications;
-import StrategyDesignPattern.NotificationContext;
-import StrategyDesignPattern.NotificationSender;
-import StrategyDesignPattern.WhatsappNotifications;
+import CodingExercises.EcommerceProductPriceAlert.Product;
+import CodingExercises.EcommerceProductPriceAlert.User;
 
 public class App {
     public static void main(String[] args) {
@@ -15,4 +12,3 @@ public class App {
         product.setProductPrice(799.99);
     }
 }
-

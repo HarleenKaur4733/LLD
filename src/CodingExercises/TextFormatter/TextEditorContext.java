@@ -1,5 +1,8 @@
+package CodingExercises.TextFormatter;
+
 public class TextEditorContext {
     TextFormatter textFormatter;
+
     TextEditorContext(TextFormatter textFormatter) {
         this.textFormatter = textFormatter;
     }

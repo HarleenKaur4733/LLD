@@ -1,4 +1,4 @@
-package ShapeFactory;
+package CodingExercises.ShapeFactory;
 
 public abstract class ShapeCreator {
     // abstract because we want to force subclasses to implement this method

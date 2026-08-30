@@ -1,4 +1,4 @@
-package TicTacToe;
+package CodingExercises.TicTacToe;
 
 public class App {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ElevatorSystem;
+package CodingExercises.ElevatorSystem;
 
 public class Request {
     int sourceFloor;

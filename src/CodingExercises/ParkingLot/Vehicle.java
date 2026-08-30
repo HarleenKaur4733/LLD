@@ -1,4 +1,4 @@
-package ParkingLot;
+package CodingExercises.ParkingLot;
 
 public class Vehicle {
     String vehicleNumber;

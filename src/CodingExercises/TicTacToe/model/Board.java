@@ -1,4 +1,4 @@
-package TicTacToe.model;
+package CodingExercises.TicTacToe.model;
 
 public class Board {
     int size;

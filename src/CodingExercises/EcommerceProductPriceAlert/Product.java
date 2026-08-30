@@ -1,3 +1,8 @@
+package CodingExercises.EcommerceProductPriceAlert;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product implements Subject {
     String productName;
     double productPrice;
@@ -20,7 +25,7 @@ public class Product implements Subject {
     }
 
     @Override
-    private void notifyObservers() {
+    public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update(productPrice);
         }

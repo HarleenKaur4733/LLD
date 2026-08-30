@@ -1,4 +1,4 @@
-package ParkingLot;
+package CodingExercises.ParkingLot;
 
 import java.util.List;
 

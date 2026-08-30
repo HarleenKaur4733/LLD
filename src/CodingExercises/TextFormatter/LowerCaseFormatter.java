@@ -1,3 +1,5 @@
+package CodingExercises.TextFormatter;
+
 public class LowerCaseFormatter implements TextFormatter {
     @Override
     public String format(String text) {

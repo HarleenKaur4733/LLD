@@ -1,4 +1,4 @@
-package TicTacToe.model;
+package CodingExercises.TicTacToe.model;
 
 import java.util.Scanner;
 

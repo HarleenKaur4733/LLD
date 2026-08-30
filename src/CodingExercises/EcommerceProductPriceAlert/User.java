@@ -1,3 +1,5 @@
+package CodingExercises.EcommerceProductPriceAlert;
+
 public class User implements Observer {
     private String name;
 

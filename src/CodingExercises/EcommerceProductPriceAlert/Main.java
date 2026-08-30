@@ -1,3 +1,5 @@
+package CodingExercises.EcommerceProductPriceAlert;
+
 public class Main {
     public static void main(String[] args) {
         Product product = new Product("Iphone 14", 999.99);

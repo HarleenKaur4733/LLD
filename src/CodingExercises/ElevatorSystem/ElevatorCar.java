@@ -1,4 +1,4 @@
-package ElevatorSystem;
+package CodingExercises.ElevatorSystem;
 
 import java.util.LinkedList;
 import java.util.Queue;

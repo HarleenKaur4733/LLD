@@ -1,13 +1,13 @@
-package TicTacToe;
+package CodingExercises.TicTacToe;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import TicTacToe.model.Board;
-import TicTacToe.model.Move;
-import TicTacToe.model.PieceType;
-import TicTacToe.model.Player;
-import TicTacToe.model.PlayingPiece;
+import CodingExercises.TicTacToe.model.Board;
+import CodingExercises.TicTacToe.model.Move;
+import CodingExercises.TicTacToe.model.PieceType;
+import CodingExercises.TicTacToe.model.Player;
+import CodingExercises.TicTacToe.model.PlayingPiece;
 
 public class Game {
     Board board;
