@@ -1,0 +1,221 @@
+Design a parking lot:
+
+Vehicle -> Parking system -> FeeStrategy -> Ticket -> Floor -> parking spot -> exit() -> exitTime -> Payment
+-                                             -         -          -                                    -
+enterTime()
+assignParkingStrategy() -> based on size
+
+exitTime()
+totalPrice()
+
+
+interface PaymentStrategy(){
+	void makePayment();
+}
+
+class CashPayment implements PaymentStrategy{
+	
+	int amount;
+	CashPayment(int amount){
+		this.amount = amount;
+	}
+	
+	@Override
+	void makePayment(){
+		sysout("Paying amount of Rs"  + amount + "via cash")
+	}
+		
+}
+
+class CreditCardPayment(){}
+
+
+-------------------------------------------------------------------
+
+class ParkingSpot{
+	String spotNumber;
+	Size vehcileSize;   ------> enum Size{SMALL, MEDIUM, LARGE}
+	Vehicle vehicle;
+	boolean isAvailable;
+	
+	
+	
+	
+	void parkVehicle(Vehicle vehicle){
+		this.vehicle = vehicle;
+		isAvailabe = false;
+	}
+	
+	void unParkVehicle(){
+		this.vehicle = null;
+		isAvailabe = true;
+	}
+
+}
+
+------------------------------------------------------------------------
+
+abstract class Vehicle{
+	String VehicleNumber;
+	Size vehicleSize;
+	
+	void enterVehicle(){
+	
+	}
+	
+	void exitVehicle(){
+	
+	}
+	
+	
+}
+
+--------------------------------------------------------------------------------
+class Floor{
+
+	int floorNumber;
+	List<ParkingSlot> availableSlots;
+	
+	
+	List<ParkingSlot> findAvailableSlot(){
+		return availableSlots;
+	}
+	
+	void addSlot(){
+		availableSlot.put(new ParkingSlot());
+	}
+	
+	
+
+	
+
+}
+
+-------------------------------------------------------------------------------------------
+interface FeeStrategy{
+
+	double calculateCost();
+
+}
+
+
+class HourBasedFeeStrategy implements FeeStrategy{
+	
+	int hours;
+	Ticket ticket;
+	
+	@Override
+	double calculateCost(){
+		return (ticket.getExitTime() - ticket.getEnteryTime()) * hours;
+	}
+
+}
+
+
+class SizeBasedFeeStrategy implements FeeStrategy{
+	
+	int smallVehicleFee;
+	int mediumVehicleFee;
+	int largeVehicleFree;
+	
+	Ticket ticket;
+	
+	@Override
+	double calculateCost(){
+		VehicleSize vehicleSize = ticket.getVehicle().getSize();
+		SWITCH(vehcileSize){
+			case SMALL:
+				returm smallVehicleFee;
+			case MEDIUM:
+				return mediumVehicleFee;
+			case LARGE:
+				return largeVehicleFree;
+			default:
+				throw new IllegalArgumentException("Unknown vehicle size: " + vehicleSize);
+		
+		}
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+class Ticket {
+
+	@id
+	long ticketNumber;
+	Vehicle vehicle;
+	
+	long entryTime;
+	long exitTime;
+	
+	ParkingSlot parkingSlot;
+	
+	Ticket(Vehicle vehicle, long entryTime, ParkingSlot parkingSlot){
+		this.vehicle = vehicle;
+		this.entryTime = entryTime;
+		this.parkingSlot = parkingSlot;
+	}
+	
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+// singleton
+class ParkingLotManagement{
+	List<Floor> floors;
+	FeeStrategy feeStrategy;
+	Map<String, Ticket> vehicleParking;
+	ParkingStrategy parkingStrategy;	
+
+}
+
+
+interface ParkingStrategy{
+
+	ParkingSpot findSpot(Vehicle vehicle);
+}
+
+
+class FirstAvailableSpot implements ParkingStrategy{
+
+	List<Floor> floors;
+
+	@Override
+	ParkingSpot findSpot(Vehicle vehicle){
+		
+		for(Floor floor : floors){
+			List<ParkingSpots> spots = floor.findAvailableSlot();
+			for(ParkingSpot spot : spots){
+				if(spot.isAvailabe()){
+					spot.parkVehicle = vehicle;
+					return ParkingSpot;
+				}
+			}
+		}
+		
+		return null;
+	
+	
+	}
+
+
+}
+
+
+
+class Main{
+	
+	psvm(..args){
+			
+		
+	
+		
+	
+	
+	}
+	
+}
