@@ -1,7 +1,7 @@
 package CodingExercises.PizzaOrderingSystem;
 
 public class ExtraCheese implements Pizza {
-
+    // has a
     private Pizza pizza;
 
     public ExtraCheese(Pizza pizza) {
