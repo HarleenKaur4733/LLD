@@ -1,0 +1,117 @@
+Stack Overflow: // concurrency to be handeled later  
+
+
+Flow
+User -> Account -> Entity -> Tags -> Comments -> Vote -> Reputation -> Search (tags, question, user Profile)
+
+
+Entity
+User -> Member
+	 -> Not Member
+	 -> Moderator
+	 -> Admin
+	 
+	 
+Entity -> Question
+	   -> Answer
+	   -> Comment
+	   
+	addComment()
+	deleteComment()
+	Rename comment()
+	
+
+
+class User{
+	
+	private long guestId;
+	private Search searchObj;
+	
+	List<Question> getQuestions(String search);	
+	
+}
+
+
+class Member extends User{
+	Account account;
+	List<Badge> badges;
+	
+	void addQuestion(Question question);
+	void deleteComment(Comment comment);
+	void addComment(Comment comment, Question question);
+    void answerQuestion(Answer answer, Question question); 
+	
+	void vote(Entity entity, VoteType voteType);
+	void addTag(Question question, Tag tag);
+
+}
+
+class Moderator extends Member{
+	
+	boolean closeQuestion(Question question);
+	boolean restoreQuestion(Question question);
+	
+
+}
+
+class Admin extends Memeber{
+
+	boolean blockMember(Member member);
+	boolean unblockmember(Member member);
+
+}
+	   
+class Account{
+	
+	Date createdAt;
+	String userName;
+	String password;
+	String description;
+	String address;
+	
+	int accountId;
+	int reputation;
+	int views;
+	
+
+}
+
+enum VoteType{
+
+	UPVOTE,
+	DOWNVOTE
+
+}
+
+class Entity{
+
+	int entityId;
+	User createdBy;
+	Map<VoteType, Integer> votes;
+	Date createdAt;
+	List<Comment> comments;
+	
+	boolean voteEntity(Vote vote);
+	boolean addComments(Comment comment);
+	
+	
+
+}
+
+
+class Question extends Entity{
+
+	List<Tag> tags;
+	String title;
+	String description;
+	List<Answer> answerList;
+	
+	void addtag(Tag tag);
+
+}
+
+class Answer extends Entity{
+
+	String answer;
+	boolean isAccepted;
+}
